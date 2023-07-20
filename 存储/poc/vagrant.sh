@@ -27,6 +27,9 @@ vagrant init
 $env:HTTP_PROXY="http://127.0.0.1:51134"
 $env:HTTPS_PROXY="http://127.0.0.1:51134"
 
+# 为了需要用到vagrant disk 配置, 需要开启disk实验性功能
+[Environment]::SetEnvironmentVariable('VAGRANT_EXPERIMENTAL', 'disks' , 'User')
+
 # update for your environment:  config.vm.provider, config.vm.network bridge, config.vm.synced_folder
 netstat -ntlp | grep ":80 " | awk '{print $7}' | awk -F"/" '{print $1}'|xargs kill
 netstat -ntlp | grep ":6443 " | awk '{print $7}' | awk -F"/" '{print $1}'|xargs kill
