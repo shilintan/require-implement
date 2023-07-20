@@ -8,7 +8,7 @@ Vagrant.configure("2") do |config|
   config.vm.synced_folder ".", "/vagrant", disabled: true
   config.vm.synced_folder "D:\\server_files", "/local_file", id: "foo"
   config.vm.disk :disk, name: "backup", size: "10GB"
-  config.vm.provider "vmware_workstation" do |vb|
+  config.vm.provider "virtualbox" do |vb|
     vb.gui = false
 #    vb.memory = 5120
 #    vb.cpus = 8

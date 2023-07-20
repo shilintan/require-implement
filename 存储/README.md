@@ -48,11 +48,15 @@ spec:
 
 # 实验
 
-安装vmware
+安装virtualbox (VirtualBox-7.0.10-158379-Win.exe)
+
+​	安装拓展包 (Oracle_VM_VirtualBox_Extension_Pack-7.0.10.vbox-extpack)
 
 安装vagrant
 
 安装系统
+
+​	手动在virtualbox界面添加ssd磁盘
 
 安装k8s
 

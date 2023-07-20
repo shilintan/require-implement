@@ -34,7 +34,7 @@ $env:HTTPS_PROXY="http://127.0.0.1:51134"
 netstat -ntlp | grep ":80 " | awk '{print $7}' | awk -F"/" '{print $1}'|xargs kill
 netstat -ntlp | grep ":6443 " | awk '{print $7}' | awk -F"/" '{print $1}'|xargs kill
 # if you have conflict the port, please delete the virtual machine
-vagrant up --debug
+vagrant up
 #vagrant rsync-auto
 
 vagrant status
@@ -51,3 +51,4 @@ vagrant halt
 vagrant destroy -f
 
 
+# 需要手动
