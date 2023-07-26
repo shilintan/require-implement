@@ -6,23 +6,22 @@ Vagrant.configure("2") do |config|
   config.vm.box = "centos/7"
   config.vm.box_check_update = false
   config.vm.synced_folder ".", "/vagrant", disabled: true
-  config.vm.synced_folder "D:\\server_files", "/local_file"
-#  config.vm.synced_folder "D:\\server_files", "/local_file", id: "foo"
-  config.vm.disk :disk, name: "backup", size: "10GB"
+#  config.vm.synced_folder "D:\\server_files", "/local_file", type: "virtualbox", automount: true
+  config.vm.disk :disk, name: "hdd-1", size: "30GB"
+
+  if Vagrant.has_plugin?("vagrant-vbguest") then
+    config.vbguest.auto_update = false
+    config.vbguest.no_remote = true
+    iso_path = "C://Program Files//Oracle//VirtualBox//VBoxGuestAdditions.iso"
+  end
+
+
   config.vm.provider "virtualbox" do |vb|
     vb.gui = false
-#    vb.memory = 5120
+#    vb.memory = 10240
 #    vb.cpus = 8
   end
   config.vm.provision "shell", inline: <<-SHELL
     echo "sudo su -" >> .bashrc
   SHELL
-  (1..1).each do |i|
-    config.vm.define "node#{i}" do |node|
-      node.vm.hostname="node#{i}"
-      config.vm.provider "vmware_workstation" do |vb|
-      end
-    end
-  end
-
 end

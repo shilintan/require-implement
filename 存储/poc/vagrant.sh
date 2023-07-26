@@ -9,7 +9,7 @@ wget https://releases.hashicorp.com/vagrant-vmware-utility/1.0.21/vagrant-vmware
 dpkg -i vagrant-vmware-utility_1.0.21_x86_64.deb
 vagrant plugin install vagrant-vmware-desktop --plugin-clean-sources --plugin-source https://gems.ruby-china.com/ --debug
 vagrant plugin uninstall vagrant-vbguest
-vagrant plugin install vagrant-vbguest --plugin-version 0.21 --plugin-clean-sources --plugin-source https://gems.ruby-china.com/ --debug
+vagrant plugin install vagrant-vbguest --plugin-clean-sources --plugin-source https://gems.ruby-china.com/ --debug
 
 # vagrant dependency virtualbox,
 # vagrant plugin install vagrant-cachier
