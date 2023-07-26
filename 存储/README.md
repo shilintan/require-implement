@@ -69,32 +69,6 @@ $env:HTTPS_PROXY="http://127.0.0.1:51134"
 
 ​			添加 虚拟硬盘
 
-​	手动设置共享目录
-
-​		手动为virtualbox 安装增强包
-
-​			在 `存储 - 控制器-IDE` 中添加 `C:\Program Files\Oracle\VirtualBox\VBoxGuestAdditions.iso`
-
-​			
-
-```
-yum install -y bzip2 kernel-devel gcc make perl
-
-
-ls /dev/sr0
-mkdir /mnt/cdrom
-mount /dev/sr0 /mnt/cdrom
-sh /mnt/cdrom/VBoxLinuxAdditions.run
-umount /dev/sr0
-rm -rf /mnt/cdrom
-
-/sbin/rcvboxadd setup
-
-mount -t vboxsf server_files /local_file
-```
-
-​		共享文件夹路径: `D:\server_files`, 挂载点: `/local_file`, 自动挂载, 固定分配
-
 安装k8s
 
 安装ceph
