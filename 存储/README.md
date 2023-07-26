@@ -78,14 +78,20 @@ $env:HTTPS_PROXY="http://127.0.0.1:51134"
 ​			
 
 ```
+yum install -y bzip2 kernel-devel gcc make perl
+
+
 ls /dev/sr0
 mkdir /mnt/cdrom
 mount /dev/sr0 /mnt/cdrom
 sh /mnt/cdrom/VBoxLinuxAdditions.run
 umount /dev/sr0
-```
+rm -rf /mnt/cdrom
 
-​		`"D:/server_files", "/local_file"`
+/sbin/rcvboxadd setup
+
+mount -t vboxsf server_files /local_file
+```
 
 ​		共享文件夹路径: `D:\server_files`, 挂载点: `/local_file`, 自动挂载, 固定分配
 

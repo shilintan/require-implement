@@ -38,6 +38,8 @@ netstat -ntlp | grep ":6443 " | awk '{print $7}' | awk -F"/" '{print $1}'|xargs 
 vagrant up
 #vagrant rsync-auto
 
+vagrant rsync
+
 vagrant status
 
 vagrant ssh
