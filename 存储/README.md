@@ -50,8 +50,6 @@ spec:
 
 安装virtualbox (VirtualBox-7.0.10-158379-Win.exe)
 
-​	安装拓展包 (Oracle_VM_VirtualBox_Extension_Pack-7.0.10.vbox-extpack)
-
 安装vagrant
 
 安装系统
